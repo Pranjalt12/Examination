@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Countdown</title>
+    <style>
+        /* Your existing styles remain unchanged */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 15px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            
+        }
+
+        h1 {
+            color: #3498db;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .days-left {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            th,
+            td {
+                padding: 10px;
+            }
+        }
+        
+        footer {
+            background-color: #1467b9;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Go to Home</a>
+    </header>
+    <h1>2<sup>nd</sup> A</h1>
+    <h3>Final Terminal Examination Counter </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>07/02/2024</td>
+                <td>Wednesday</td>
+                <td>English Transcription, dictation + reading</td>
+            </tr>
+        <tbody>
+            <tr>
+                <td>08/02/2024</td>
+                <td>Thursday</td>
+                <td>Hindi Transcription, dictation + reading</td>
+            </tr>
+        <tbody>
+            <tr>
+                <td>09/02/2024</td>
+                <td>Friday</td>
+                <td>Science dictation</td>
+            </tr>
+        <tbody>
+            <tr>
+                <td>10/02/2024</td>
+                <td>Saturday</td>
+                <td>Holiday</td>
+            </tr>
+        <tbody>
+            <tr>
+                <td>11/02/2024</td>
+                <td>Sunday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>12/02/2024</td>
+                <td>Monday</td>
+                <td>English Topic, Application, Make Sent</td>
+            </tr>
+
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>13/02/2024</td>
+                <td>Tuesday</td>
+                <td>S.St Dictation</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>14/02/2024</td>
+                <td>Wednesday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>15/02/2024</td>
+                <td>Thursday</td>
+                <td>Hindi Topic + Letter + Make Sent</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>16/02/2024</td>
+                <td>Friday</td>
+                <td>🎂🎂 🥳🥳</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>17/02/2024</td>
+                <td>Saturday</td>
+                <td>Literature</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>18/02/2024</td>
+                <td>Sunday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>19/02/2024</td>
+                <td>Monday</td>
+                <td>S.St</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>20/02/2024</td>
+                <td>Tuesday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>21/02/2024</td>
+                <td>Wednesday</td>
+                <td>Punjabi</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>22/02/2024</td>
+                <td>Thursday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>23/02/2024</td>
+                <td>Friday</td>
+                <td>Language</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>24/02/2024</td>
+                <td>Saturday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>25/02/2024</td>
+                <td>Sunday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>26/02/2024</td>
+                <td>Monday</td>
+                <td>Maths</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>27/02/2024</td>
+                <td>Tuesday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>28/02/2024</td>
+                <td>Wednesday</td>
+                <td>Hindi (Grammar + Reader) </td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>29/02/2024</td>
+                <td>Thursday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>01/03/2024</td>
+                <td>Friday</td>
+                <td>Science</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>02/03/2024</td>
+                <td>Saturday</td>
+                <td>Drawing</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>03/03/2024</td>
+                <td>Sunday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>04/03/2024</td>
+                <td>Monday</td>
+                <td>Moral Science</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>5/03/2024</td>
+                <td>Tuesday</td>
+                <td>Holiday</td>
+            </tr>
+            <!-- Repeat similar rows for other subjects and dates -->
+        </tbody>
+        <tbody>
+            <tr>
+                <td>06/03/2024</td>
+                <td>Wednesday</td>
+                <td>G.K</td>
+            </tr>
+           
+    </table>
+    
+    <footer>
+        Created by Pranjal Tomar
+    </footer>
+</body>
+</body>
+
+</html>

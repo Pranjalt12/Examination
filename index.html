@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Countdown</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 15px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.5s ease-in-out;
+        }
+
+        header a:hover {
+            color: #6cf483;
+        }
+
+        h1 {
+            color: #3498db;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .days-left {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            th,
+            td {
+                padding: 10px;
+            }
+        }
+
+        footer {
+            background-color: #1467b9;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="datesheet.html">Date Sheet</a>
+    </header>
+    <h1>2<sup>nd</sup> A</h1>
+    <h3>Final Terminal Examination Counter </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Exam</th>
+                <th>Date</th>
+                <th>Days Left</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hindi Transcription, dictation + reading</td>
+                <td>2024-01-31</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>English Transcription, dictation + reading</td>
+                <td>2024-02-07</td>
+                <td class="days-left"></td>
+            </tr>
+
+            <tr>
+                <td>Science Dictation</td>
+                <td>2024-02-09</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>English Topic + Application + Make Sent.</td>
+                <td>2024-02-12</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>S.St Dictation</td>
+                <td>2024-02-13</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Hindi Topic, Letter, Make Sent.</td>
+                <td>2024-02-15</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>English Literature</td>
+                <td>2024-02-17</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>S.St</td>
+                <td>2024-02-19</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Punjabi</td>
+                <td>2024-02-21</td>
+                <td class="days-left"></td>
+            </tr>
+
+            <tr>
+                <td>English Language</td>
+                <td>2024-02-23</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td>2024-02-26</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Hindi(Reader + Grammar) </td>
+                <td>2024-02-28</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>2024-03-01</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Drawing</td>
+                <td>2024-03-02</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>Moral Science</td>
+                <td>2024-03-04</td>
+                <td class="days-left"></td>
+            </tr>
+            <tr>
+                <td>G.K</td>
+                <td>2024-03-06</td>
+                <td class="days-left"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <script>
+        const today = new Date();
+        const dateCells = document.querySelectorAll(".days-left");
+
+        dateCells.forEach(cell => {
+            const examDate = new Date(cell.parentNode.querySelector("td:nth-child(2)").textContent + "T00:00:00");
+            const diffInDays = Math.floor((examDate - today) / (1000 * 60 * 60 * 24));
+            cell.textContent = diffInDays;
+        });
+    </script>
+    <footer>
+        Created by Pranjal Tomar
+    </footer>
+</body>
+
+</html>
